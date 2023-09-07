@@ -1,0 +1,26 @@
+<div class='container-fluid mt-5'>
+    <div class="card w-75 mx-auto"  >
+      <div class='card-title text-center'>
+          <h2><%=@book.title%></h2>
+      </div>
+      <div class="card-body">
+        <h4><%=@book.author%></h4>
+        <p><%=@book.description%></p>
+      </div>
+    </div>
+
+    <div class='row row-cols-4 col-2 mx-auto mx-5 px-5 mt-4'>
+        <%=link_to 'Back', :back, class: 'btn btn-primary mx-2'%>
+        <%=link_to 'Edit', edit_book_path(@book), class: 'btn btn-info'%>
+        <div><%=button_to 'Delete', book_path(@book), method: :delete, data: {confirm: "Are you sure"}, class:"btn btn-danger "%></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<%#= button_to "Destroy", book_path(@book), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
